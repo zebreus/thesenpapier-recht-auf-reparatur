@@ -1,0 +1,209 @@
+:doctype: book
+:imagesdir: images
+:stylesheet: paper.css
+// Disable generating an update label at the bottom of the doc.
+:last-update-label!:
+// Setup highlight.js to use a local version with a local stylesheet
+:source-highlighter: highlight.js
+:highlightjs-theme: thesis
+:highlightjsdir: libraries/highlightjs
+// Enable rendering math equations
+:stem:
+// Generate a table of contents at the toc macro
+// Also disabling section numbers for now, as we only start numbering after the toc. See the macros there
+:toc: macro
+:toclevels: 3
+:sectanchors:
+// Disable the title page
+// We will build the title page manually for maximum flexibility
+:notitle:
+:title-page: false
+// Refer to things like "Figure 1" instead of by their name
+:xrefstyle: short
+// Prefetch and inline diagrams with kroki but not in vscode
+ifndef::env-vscode[]
+:kroki-fetch-diagram: true
+:kroki-default-options: inline
+endif::env-vscode[]
+
+image::../assets/logo_hda.svg[role=logo]
+
+[.university.text-center]
+Darmstadt University of Applied Sciences
+
+[.faculty.text-center]
+Faculty of Computer Science
+
+[discrete#main-title]
+= Recht auf Reparatur
+
+[.presented-by.text-center]
+*Alfred Ashur Oshana* 000000  +
+*Lennart Eichhorn* 000000 +
+*Marcel Medlhammer* 000000
+
+== Recht auf Reparatur
+
+Viele Menschen haben das Gefühl, dass sie ihr Eigentum selbständig reparieren dürfen. Ob das tatsächlich der Fall sein sollte, wurde aber noch nicht geklärt, da sich die Frage in der Vergangenheit nicht gestellt hat. In den letzten Jahren wurde es durch den technischen Fortschritt immer einfacher, sie daran zu hindern. Dadurch ergibt sich jetzt die Frage, ob ein Recht auf Eigentum auch so etwas wie ein Recht auf Reparatur umfasst.
+
+=== Die Geschichte - Warum wird das Recht der Reparatur gebraucht?
+
+Vor der industriellen Revolution existierte keine klare Trennung zwischen Herstellern und Konsumenten, wodurch individuelle Reparaturen selbstverständlich waren. Seit der industriellen Revolution wurde die Trennung zwischen Hersteller und Konsument immer deutlicher. Im 20. Jahrhundert optimierten Hersteller wie Ford Werkstätten, wobei nur autorisierte Werkstätten Zugang zu Teilen erhielten. Damit wurden unabhängige Reparaturen schwieriger, jedoch waren die Maßnahmen vor allem auf eine verbesserte Reparaturqualität ausgelegt und nicht aktiv reparaturfeindlich. Im Zuge der industriellen Revolution wurde es auch immer günstiger, Produkte zu produzieren und zu transportieren.
+
+Ab der zweiten Hälfte des 20. Jahrhunderts wurde das Altern von Produkten vermehrt als Marketingstrategie gesehen. Da neue Produkte inzwischen sehr billig geworden sind, ist ein Neukauf statt einer Reparatur zu einer Option geworden. Dadurch haben Hersteller jetzt einen finanziellen Anreiz die Reparatur zu erschweren. Dies wird im späten zwanzigsten Jahrhundert durch verschiedene Maßnahmen erreicht, durch die unabhängige Reparatur immer noch möglich, aber deutlich schwerer wird. Diese Maßnahmen sind z.B.
+- Verzicht auf Standardteile,
+- Einschränkung der Reparaturen die autorisierte Werkstätte durchführen dürfen,
+- Geheimhaltung von Reparaturanleitungen,
+- kein Verkauf von Ersatzteilen,
+- kein Verkauf von Spezialwerkzeug.
+
+Der Einzug von Computern (Hardware + Software) in quasi jedes größere Gerät erschwerte Reparaturen weiter und macht sie teilweise sogar praktisch unmöglich. Die integrierten und miniaturisierten Computerchips kann man im Gegensatz zu mechanischen Komponenten nicht mehr einfach reparieren oder verändern. Wenn an der Software etwas geändert oder repariert werden soll, muss der Computer das als Funktion eingebaut haben. Heute werden diese Hindernisse auch von einigen Herstellern wie z.B. Apple genutzt, indem der Austausch mancher Teile nur mit nichtöffentlicher Spezialsoftware möglich ist. Diese Praxis nennt sich Part Pairing. Dadurch können diese Teile ausschließlich vom Hersteller repariert werden, die dadurch eine Art Monopol auf Reparatur der von ihnen hergestellten Geräte erhalten.
+
+=== Definition Recht auf Reparatur
+
+Das Ziel eines Rechts auf Reparatur ist es dieses Monopol auf Reparatur einzugrenzen. Recht auf Reparatur ist aktuell noch nicht klar definiert, es gibt jedoch einige zentrale Forderungen:
+Geräte sollten so gebaut werden dass sie überhaupt repariert werden können
+Ersatzteile, Werkzeug und Software sollten frei verkauft werden
+Geräte sollten nicht durch Software vor Reparatur geschützt werden
+Die Reparierbarkeit eines Gerätes sollte klar kommuniziert werden
+
+Diese Forderungen betreffen eine Reihe von Aspekten, unter anderem:
+
+- *Nachhaltigkeit und Umweltschutz*: Das Recht auf Reparatur fördert eine nachhaltige Nutzung von Ressourcen, indem es die Lebensdauer von Produkten verlängert und die Menge an Elektroschrott reduziert.
+- *Geistiges Eigentum*: Das Recht auf Reparatur kann es für Hersteller schwieriger machen, ihr geistiges Eigentum und Innovationen zu schützen, weil es für andere leichter wird, ihre Produkte zu verstehen.
+- *Eigentumsrechte*: Traditionelle Eigentumsrechte bieten Schutz vor unzulässiger Einmischung durch Dritte. Andere Personen dürfen nicht ohne Zustimmung des Eigentümers in die Nutzung oder Verfügung über das Eigentum eingreifen. Ein Recht auf Reparatur könnte diesen Schutz wiederherstellen.
+- *Freie Marktwirtschaft*: Unternehmen dürfen frei in einem wettbewerbsorientierten Marktumfeld zu agieren. Sie können Preise festlegen, Produktionsmengen bestimmen und sich frei für Märkte entscheiden, auf denen sie tätig werden möchten. Das Recht auf Reparatur schränkt diese Freiheit eventuell ein.
+
+=== Gesetze - Welche gibt es und welche entstehen vielleicht?
+
+Welche existieren bereits?
+
+- Ökodesign - Richtlinie für elektronische Großgeräte
+- gesetzliche Gewährleistung
+
+Was beinhaltet der erste Gesetzesvorschlag an die EU?
+
+- Erweiterung der Gewährleistung (länger & Beweislastumkehr)
+- Reparaturpflicht für die Hersteller (falls nicht EU → Importeur)
+- maximal 15 Tage für eine Reparatur
+- Reparatur = bestimmter Prozentsatz der zu reparierenden Ware
+- Änderungen bei Ersatzteilen (bspw. verbieten von Part Pairing)
+- min. 10 Jahre Software-Updates
+- SPI (Sustainable Products Initiative) → führt die Ökodesign Verordnung ein
+
+Wann kommen die Änderungen?
+
+Die Gesetze werden von der EU-Kommission überprüft und es dauert lange, bis die Gesetze umgesetzt werden. Deshalb wird ab 2025 ein Reparatur-Index als Übergangslösung eingeführt. Der Reparatur-Index berücksichtigt hierbei die Anzahl der Schritte zum Auseinanderbauen, die Ersatzteilverfügbarkeit und die Dauer der Verfügbarkeit von Software-Updates. 
+
+=== Auswirkungen - Was könnte durch die neuen Gesetze passieren?
+Im nächsten Kapitel betrachten wir nun die Auswirkungen, die ein Gesetzentwurf von Recht auf Reparatur mit sich bringen könnte.
+
+Die meisten Prognosen theoretisieren hier von positiven Auswirkungen, sowohl für den Verbraucher als auch für die Umwelt.
+
+Es gibt aber auch Studien, welche die potentiellen Schattenseiten von Recht auf Reparatur aufzeigen. Im Prinzip sagen diese aus, dass die Hersteller auf den Gesetzesentwurf mit sehr niedrigen Preisen antworten, um Kunden von einer Reparatur abzuhalten und sie eher Richtung Austausch zu lenken, was zu einer Belastung der Umwelt und des Verbrauchers führen würde. Auch die Alternative, dass Hersteller ihre Preise erhöhen und Nutzer alte, nicht energieeffiziente Geräte noch lange nutzen, führt zu ähnlichen Problemen.
+
+=== Befürworter und Gegner - Wer verhindert solche Gesetze und wer setzt sie durch
+Befürworter sind traditionell eher politisch engagierte Bürger oder mittelständige Unternehmen. Diese sind vor allem in den Branchen Reparatur und Recycling tätig.
+
+Dagegen sind die Gegner solcher Gesetzesvorhaben milliardenschwere Unternehmen wie Apple, Google und Microsoft, die bei einer Durchsetzung eines solchen Gesetzes auch in der finanziellen Verantwortung stünden, dieses zu implementieren. Dementsprechend setzten sie viel Geld und Ressourcen ein, um gegen solche Gesetze zu lobbyieren.
+
+In den letzten Jahren hat sich dieser Trend jedoch scheinbar umgekehrt und auch diese Firmen nehmen zunehmend Stellungen ein, die solche Gesetze teilweise stützen.
+
+[bibliography]
+== Literaturverzeichnis
+
+* [[[Hat20]]]
++Masayuki Hatta+ +
+_The Right to Repair, the Right to Tinker, and the Right to Innovate_ +
+IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems +
+link:pass:[https://doi.org/10.7880/abas.0200604a][10.7880/abas.0200604a^]
+
+* [[[Ste00]]]
++Stephan L. Mcintyre+ +
+_The Failure of Fordism: Reform of the Automobile Repair Industry, 1913-1940_ +
+Johns Hopkins University Press +
+link:pass:[https://doi.org/10.1353/tech.2000.0075][10.1353/tech.2000.0075]
+
+* [[[Ver20]]]
++Bundesverband der Verbraucherzentralen und Verbraucherverbände - Verbraucherzentrale Bundesverband e.V.+ +
+_Recht auf Reparatur darf keine Mogelpackung werden_ +
+Verbraucherzentrale Bundesland +
+https://www.vzbv.de/pressemitteilungen/endlich-ernst-machen-mit-dem-recht-auf-reparatur
+
+* [[[Int290]]]
++Hans Jonas+ +
+_The Imperative of Responsibility: In Search of an Ethics for the Technological Age_
+https://cloudflare-ipfs.com/ipfs/bafykbzacecvtki64v5daxh77on2jnn4ikwxxlz3slvrxyx5udhflxet5bdmcs?filename=Hans%20Jonas%20-%20The%20Imperative%20of%20Responsibility_%20In%20Search%20of%20an%20Ethics%20for%20the%20Technological%20Age-University%20of%20Chicago%20Press%20%281985%29.pdf[📁^]
+
+* [[[Lea19]]]
++Leah Chan Grinvald, Ofer Tur-Sinai+ +
+_Intellectual Property Law and the Right to Repair_ +
+Fordham Law Review +
+link:pass:[https://doi.org/10.2139/ssrn.3317623][10.2139/ssrn.3317623^]
+
+* [[[sadjk1]]]
+[Online; Einsicht am 11.2023] +
+https://www.bundesregierung.de/breg-de/themen/tipps-fuer-verbraucher/reparieren-statt-wegwerfen-2022782
+
+* [[[sadjk2]]]
+[Online; Einsicht am 11.2023] +
+https://www.bmuv.de/themen/nachhaltigkeit/konsum-und-produkte/faq-recht-auf-reparatur
+
+* [[[sadjk3]]]
+[Online; Einsicht am 11.2023] +
+https://www.parlament.gv.at/dokument/fachinfos/zukunftsthemen/132_recht_auf_reparatur.pdf
+
+* [[[sadjk4]]]
+[Online; Einsicht am 11.2023] +
+https://eur-lex.europa.eu/eli/reg
+
+* [[[sadjk5]]]
+[Online; Einsicht am 11.2023] +
+https://www.europarl.europa.eu/RegData/etudes/BRIE/2022/698869/EPRS_BRI(2022)698869_EN.pdf
+
+* [[[sadjk6]]]
+[Online; Einsicht am 11.2023] +
+https://www.evz.de/einkaufen-internet/recht-auf-reparatur.html
+
+* [[[sadjk7]]]
+[Online; Einsicht am 11.2023] +
+https://www.bmuv.de/themen/nachhaltigkeit/konsum-und-produkte/faq-recht-auf-reparatur
+
+* [[[sadjk8]]]
+[Online; Einsicht am 11.2023] +
+https://www.trustedreviews.com/wp-content/uploads/sites/54/2022/05/dji-mini-3-unfolded-920x518.jpg
+
+* [[[sadjk9]]]
+[Online; Einsicht am 11.2023] +
+https://www.matthias-durstewitz.de/wp/2016/02/18/demontage-praktica-mtl-50/
+
+* [[[sadjk0]]]
+[Online; Einsicht am 11.2023] +
+https://www.flickr.com/photos/arkku/3878260931
+
+* [[[sadjk22]]]
+[Online; Einsicht am 11.2023] +
+https://en.wikipedia.org/wiki/Ford_Model_T
+
+* [[[sadjk33]]]
+[Online; Einsicht am 11.2023] +
+https://pubsonline.informs.org/doi/10.1287/mnsc.2022.4401 
+
+* [[[sadjk44]]]
+[Online; Einsicht am 11.2023] +
+https://pirg.org/articles/who-doesnt-want-the-right-to-repair-companies-worth-over-10-trillion/ 
+
+* [[[sadjk55]]]
+[Online; Einsicht am 11.2023] +
+https://grist.org/technology/microsoft-right-to-repair-quietly-supported-legislation-to-make-it-easier-to-fix-devices-heres-why-thats-a-big-deal/ 
+
+* [[[sadjk66]]]
+[Online; Einsicht am 11.2023] +
+https://www.eff.org/de/deeplinks/2023/08/apple-long-critic-right-repair-comes-out-support-california-bill 
+
+* [[[sadjk77]]]
+[Online; Einsicht am 11.2023] +
+https://www.popularmechanics.com/technology/a39677632/right-to-repair-google-pixel
+
+
+include::scripts/trailing-scripts.adoc[]

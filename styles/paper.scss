@@ -52,3 +52,7 @@ $page-margin-left: (
 .imageblock>.content {
     text-align: center;
 }
+
+ul.bibliography li p>a:first-of-type {
+    display: none;
+}
